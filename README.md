@@ -116,17 +116,37 @@ pixi global install gh
 
 </details>
 
-It is possible to list all of the versions of `gh` available on your platform with `conda`:
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `gh` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search gh --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search gh --channel conda-forge
 ```
+
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search gh --channel conda-forge
+```
+
+</details>
 
 Alternatively, `mamba repoquery` may provide more information:
 
