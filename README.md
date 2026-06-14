@@ -148,7 +148,8 @@ pixi search gh --channel conda-forge
 
 </details>
 
-Alternatively, `mamba repoquery` may provide more information:
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -160,6 +161,8 @@ mamba repoquery whoneeds gh --channel conda-forge
 # List dependencies of `gh`:
 mamba repoquery depends gh --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
