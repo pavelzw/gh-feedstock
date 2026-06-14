@@ -31,6 +31,7 @@ jobs:
             free_disk_space: skip
             os: ubuntu
             pagefile_size: 0
+            resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_aarch64_
@@ -42,6 +43,7 @@ jobs:
             free_disk_space: skip
             os: ubuntu
             pagefile_size: 0
+            resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
           - CONFIG: linux_ppc64le_
@@ -53,6 +55,7 @@ jobs:
             free_disk_space: skip
             os: ubuntu
             pagefile_size: 0
+            resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
     steps:
@@ -108,8 +111,8 @@ jobs:
         CONFIG: ${{ matrix.CONFIG }}
         MINIFORGE_HOME: ${{ matrix.tools_install_dir }}
         UPLOAD_PACKAGES: ${{ matrix.UPLOAD_PACKAGES }}
-        RATTLER_BUILD_ENABLE_GITHUB_INTEGRATION: 'true'
         RATTLER_BUILD_COLOR: always
+        RATTLER_BUILD_ENABLE_GITHUB_INTEGRATION: 'true'
         BINSTAR_TOKEN: ${{ secrets.BINSTAR_TOKEN }}
         FEEDSTOCK_TOKEN: ${{ secrets.FEEDSTOCK_TOKEN }}
         STAGING_BINSTAR_TOKEN: ${{ secrets.STAGING_BINSTAR_TOKEN }}
@@ -145,8 +148,8 @@ jobs:
         MINIFORGE_HOME: ${{ matrix.tools_install_dir }}
         PYTHONUNBUFFERED: 1
         UPLOAD_PACKAGES: ${{ matrix.UPLOAD_PACKAGES }}
-        RATTLER_BUILD_ENABLE_GITHUB_INTEGRATION: 'true'
         RATTLER_BUILD_COLOR: always
+        RATTLER_BUILD_ENABLE_GITHUB_INTEGRATION: 'true'
         BINSTAR_TOKEN: ${{ secrets.BINSTAR_TOKEN }}
         FEEDSTOCK_TOKEN: ${{ secrets.FEEDSTOCK_TOKEN }}
         STAGING_BINSTAR_TOKEN: ${{ secrets.STAGING_BINSTAR_TOKEN }}
